@@ -10,5 +10,6 @@ Following is what has been performed till now:
 
 Voila!! You dont have to do this again everytime, a test suite is ready to perform this automatically for you!
 
-PS: Developed by Andalib Sheikh
-gmail: andalib.sheikh2202@gmail.com
+PS: Developed by Andalib Sheikh,
+gmail: andalib.sheikh22062@gmail.com, 
+linkedin: https://www.linkedin.com/in/andalib-sheikh/
