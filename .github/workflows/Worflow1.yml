@@ -37,7 +37,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Export Sauce Password
         env:
-          SAUCE_USERNAME: ${{ secrets.SAUCE_PASSWORD }}
+          SAUCE_PASSWORD: ${{ secrets.SAUCE_PASSWORD }}
         run: |
           echo "SAUCE_PASSWORD=$(echo $SAUCE_PASSWORD)" >> $GITHUB_ENV
           
