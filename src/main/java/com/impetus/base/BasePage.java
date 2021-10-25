@@ -59,7 +59,10 @@ public class BasePage {
 		
 		
 		System.setProperty("webdriver.edge.driver","build/msedgedriver");
-		String huburl="https://oauth-andalib.sheikh22062-25b67:b486ce09-bf02-4979-a32e-4d81788dc344@ondemand.eu-central-1.saucelabs.com:443/wd/hub";
+		String username=System.getenv("SAUCE_USERNAME");
+		String key=System.getenv("SAUCE_PASSWORD");
+		System.out.println("user "+username+" key "+key);
+		String huburl="https://"+username+":"+key+"@ondemand.eu-central-1.saucelabs.com:443/wd/hub";
 		driver=new RemoteWebDriver(new URL(huburl),cap);
 
 		driver.manage().window().maximize();
