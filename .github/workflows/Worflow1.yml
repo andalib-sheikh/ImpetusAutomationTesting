@@ -28,8 +28,20 @@ jobs:
         run: echo Test started!
 
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: Export Sauce Username
+        env:
+          SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
         run: |
-          export SAUCE_USERNAME=$SAUCE_USERNAME
-          export SAUCE_PASSWORD=$SAUCE_PASSWORD
+          echo "SAUCE_USERNAME=$(echo $SAUCE_USERNAME)" >> $GITHUB_ENV
+          
+      # Runs a set of commands using the runners shell
+      - name: Export Sauce Password
+        env:
+          SAUCE_USERNAME: ${{ secrets.SAUCE_PASSWORD }}
+        run: |
+          echo "SAUCE_PASSWORD=$(echo $SAUCE_PASSWORD)" >> $GITHUB_ENV
+          
+       # Runs a set of commands using the runners shell
+      - name: Run Maven Command
+        run:
           mvn clean test
