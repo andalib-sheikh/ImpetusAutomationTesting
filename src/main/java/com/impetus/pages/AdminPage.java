@@ -63,7 +63,6 @@ public class AdminPage extends BasePage{
 		elementUtil.waitForElementToBeVisible(btnBrowseAllJobs);
 		btnBrowseAllJobs.click();
 		Thread.sleep(5000);
-		elementUtil.waitForElementToBeVisible(lblCurrentOpenings);
 		js.executeScript("arguments[0].scrollIntoView();", lblCurrentOpenings);
 		elementUtil.waitForElementToBeVisible(lblCurrentOpenings);
 		inputMinExp.sendKeys(Min_Exp.subSequence(0, Min_Exp.indexOf(".")));
