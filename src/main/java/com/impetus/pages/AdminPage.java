@@ -127,7 +127,7 @@ public class AdminPage extends BasePage{
 		Thread.sleep(3000);
 		elementUtil.waitForElementToBeVisible(lblUploadResume);
 		Thread.sleep(2000);
-		btnUploadResume.sendKeys("C:\\Users\\user\\Desktop\\Andalib Sheikh_Resume_October2021.pdf");
+		btnUploadResume.sendKeys("src/main/java/TestData/Andalib Sheikh_Resume_Sep2021.pdf");
 		Thread.sleep(3000);
 		inputFirstName.clear();
 		inputFirstName.sendKeys(FirstName);
