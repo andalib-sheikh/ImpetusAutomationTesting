@@ -127,7 +127,7 @@ public class AdminPage extends BasePage{
 		Thread.sleep(3000);
 		elementUtil.waitForElementToBeVisible(lblUploadResume);
 		Thread.sleep(2000);
-		String filePath = System.getProperty("user.dir") + "/src/main/java/TestData/Andalib Sheikh_Resume_Sep2021.pdf"; 
+		String filePath = "https://github.com/andalib-sheikh/ImpetusAutomationTesting/blob/master/src/main/java/TestData/Andalib%20Sheikh_Resume_October2021.pdf"; 
 		btnUploadResume.sendKeys(filePath);
 		Thread.sleep(3000);
 		inputFirstName.clear();
