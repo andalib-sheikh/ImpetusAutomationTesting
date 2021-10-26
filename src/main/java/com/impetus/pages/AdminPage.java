@@ -103,9 +103,9 @@ public class AdminPage extends BasePage{
 		elementUtil.waitForElementToBeVisible(btnBrowseAllJobs);
 		btnBrowseAllJobs.click();
 		Thread.sleep(5000);
-		elementUtil.waitForElementToBeVisible(lblCurrentOpenings);
-		js.executeScript("arguments[0].scrollIntoView();", lblCurrentOpenings);
-		elementUtil.waitForElementToBeVisible(lblCurrentOpenings);
+		//elementUtil.waitForElementToBeVisible(lblCurrentOpenings);
+		//js.executeScript("arguments[0].scrollIntoView();", lblCurrentOpenings);
+		//elementUtil.waitForElementToBeVisible(lblCurrentOpenings);
 		inputMinExp.sendKeys(Min_Exp.subSequence(0, Min_Exp.indexOf(".")));
 		inputMaxExp.sendKeys(Max_Exp.subSequence(0, Max_Exp.indexOf(".")));
 		driver.findElement(By.xpath("//input[@id='Country_"+Country+"']")).click();
