@@ -133,7 +133,7 @@ public class AdminPage extends BasePage{
 		Thread.sleep(2000);
 		//((RemoteWebElement)btnUploadResume).setFileDetector(new LocalFileDetector());
 		((RemoteWebDriver)driver).setFileDetector(new LocalFileDetector());
-		System.out.println("SSSSSSSSSSSSSSSSSSSSS +System.getProperty("user.dir"));
+		System.out.println("SSSSSSSSSSSSSSSSSSSSS "+System.getProperty("user.dir"));
 		File file = new File(System.getProperty("user.dir") +"/src/main/java/TestData/Andalib Sheikh_Resume_Sep2021.pdf"); 
 	    System.out.println("file exists: " + file.exists());
 
