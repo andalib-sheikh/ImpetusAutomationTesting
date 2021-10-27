@@ -1,5 +1,6 @@
 package com.impetus.pages;
 
+import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.math3.analysis.function.Min;
@@ -7,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.LocalFileDetector;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -129,12 +131,13 @@ public class AdminPage extends BasePage{
 		Thread.sleep(3000);
 		elementUtil.waitForElementToBeVisible(lblUploadResume);
 		Thread.sleep(2000);
-		driver.setFileDetector(new LocalFileDetector());
-    File file = new File(System.getProperty("user.dir") + "/src/main/java/TestData/Andalib Sheikh_Resume_Sep2021.pdf"); 
-    Utils.Log("file exists: " + file.exists());
+		//((RemoteWebElement)btnUploadResume).setFileDetector(new LocalFileDetector());
+		((RemoteWebDriver)driver).setFileDetector(new LocalFileDetector());
+		File file = new File(System.getProperty("user.dir") +"/src/main/java/TestData/Andalib Sheikh_Resume_Sep2021.pdf"); 
+	    System.out.println("file exists: " + file.exists());
 
-    String imagePath = file.getAbsolutePath();
-  
+	    String imagePath = file.getAbsolutePath();
+		//String filePath = System.getProperty("user.dir")+ "/src/main/java/TestData/Andalib Sheikh_Resume_Sep2021.pdf"; 
 		btnUploadResume.sendKeys(imagePath);
 		Thread.sleep(3000);
 		inputFirstName.clear();
