@@ -129,9 +129,13 @@ public class AdminPage extends BasePage{
 		Thread.sleep(3000);
 		elementUtil.waitForElementToBeVisible(lblUploadResume);
 		Thread.sleep(2000);
-		//((RemoteWebElement)btnUploadResume).setFileDetector(new LocalFileDetector());
-		String filePath = "/src/main/java/TestData/TestData.xlsx"; 
-		btnUploadResume.sendKeys(filePath);
+		driver.setFileDetector(new LocalFileDetector());
+    File file = new File(System.getProperty("user.dir") + "/src/main/java/TestData/Andalib Sheikh_Resume_Sep2021.pdf"); 
+    Utils.Log("file exists: " + file.exists());
+
+    String imagePath = file.getAbsolutePath();
+  
+		btnUploadResume.sendKeys(imagePath);
 		Thread.sleep(3000);
 		inputFirstName.clear();
 		inputFirstName.sendKeys(FirstName);
