@@ -130,7 +130,7 @@ public class AdminPage extends BasePage{
 		elementUtil.waitForElementToBeVisible(lblUploadResume);
 		Thread.sleep(2000);
 		//((RemoteWebElement)btnUploadResume).setFileDetector(new LocalFileDetector());
-		String filePath = "\src\\main\\java\\TestData\\TestData.xlsx"; 
+		String filePath = "/src/main/java/TestData/TestData.xlsx"; 
 		btnUploadResume.sendKeys(filePath);
 		Thread.sleep(3000);
 		inputFirstName.clear();
