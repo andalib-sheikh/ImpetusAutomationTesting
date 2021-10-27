@@ -134,7 +134,7 @@ public class AdminPage extends BasePage{
 		//((RemoteWebElement)btnUploadResume).setFileDetector(new LocalFileDetector());
 		((RemoteWebDriver)driver).setFileDetector(new LocalFileDetector());
 		System.out.println("SSSSSSSSSSSSSSSSSSSSS "+System.getProperty("user.dir"));
-		File file = new File("./src/main/java/TestData/TestData.xlsx"); 
+		File file = new File("./src/main/java/TestData/AS_Resume.pdf"); 
 	    System.out.println("file exists: " + file.exists());
 
 	    String imagePath = file.getAbsolutePath();
